@@ -328,7 +328,7 @@ function getGroups(){
   }
   const byGroup = {};
   items.forEach(i => {
-    if(!byGroup[i.groupId]) byGroup[i.groupId] = { groupId:i.groupId, groupName:i.groupName, mobile:i.mobile, policies:[] };
+    if(!byGroup[i.groupId]) byGroup[i.groupId] = { groupId:i.groupId, groupName:i.groupName, mobile:i.mobile, address:i.address, policies:[] };
     byGroup[i.groupId].policies.push(i);
   });
   let groups = Object.values(byGroup).map(g => {
